@@ -1,3 +1,13 @@
 <app-navbar></app-navbar>
-<app-home></app-home>
+<app-base-ui>
+    <app-home *ngIf="exibirHome"></app-home>
+    <div>{{number}}</div>
+    <div>
+        <li>
+            <ul *ngFor="let item of ususrios">{{item}}</ul>
+        </li>
+    </div>
+    <button (click)="destruir()">botao</button>
+    <button (click)="contador()">contar</button>
+</app-base-ui>
 <app-footer></app-footer>
