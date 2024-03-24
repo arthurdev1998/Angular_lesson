@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-users',
   standalone: true,
-  imports: [CommonModule, UsersComponent],
+  imports: [CommonModule, UsersComponent, RouterModule],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
 })

@@ -3,7 +3,12 @@
 <div style="width: 200px; height: 200px ;">
     <ul *ngFor="let user of userList">
         <button class="btn btn-primary">
-            <li>{{user}}</li>
+            <li [routerLink]="['/user/'+user]">{{user}}</li>
+        </button>
+        <button class="btn btn-outline-success">
+            <li [routerLink]="['/user/details']" [queryParams]="{
+                username: user
+            }">{{user}}</li>
         </button>
     </ul>
 </div>
